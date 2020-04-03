@@ -28,7 +28,15 @@ public class LLine {
 				{
 					for(char b: c.getBody())
 					{
-						if(b == 'Q') throw new LSystemSymbolException(b);
+						if(b == 'Q') 
+						{
+							throw new LSystemSymbolException(b);
+						}
+						if(b == ' ') 
+						{
+							throw new LSystemLengthException();
+						}
+						
 						a.add(b);
 						
 					}
