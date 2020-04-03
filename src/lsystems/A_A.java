@@ -2,8 +2,8 @@ package lsystems;
 
 public class A_A extends LRule{
 	
-	private char match = 'A';
-	private char[] body = {'A'};
+	private final char match = 'A';
+	private final char[] body = {'A', 'A'};
 	
 	public char getMatch()
 	{
