@@ -10,14 +10,16 @@ import org.junit.Test;
 public class LLineTest {
 
 	@Test
-	public void testConstruction() {
+	public void testConstruction() 
+	{
 		char[] test = {'T', 'E', 'S', 'T'};
 		Set<LRule> rules = new HashSet<LRule>();
 		LLine line = new LLine(test, rules);
 	}
 	
 	@Test
-	public void testToString() {
+	public void testToString() 
+	{
 		char[] test = {'T', 'E', 'S', 'T'};
 		Set<LRule> rules = new HashSet<LRule>();
 		LLine line = new LLine(test, rules);
@@ -25,7 +27,8 @@ public class LLineTest {
 	}
 	
 	@Test
-	public void testA_Aprocess() throws LSystemSymbolException, LSystemLengthException {
+	public void testA_Aprocess() throws LSystemSymbolException, LSystemLengthException 
+	{
 		char[] test = {'A'};
 		Set<LRule> rules = new HashSet<LRule>();
 		rules.add(new A_A());
@@ -36,7 +39,8 @@ public class LLineTest {
 	}
 	
 	@Test
-	public void testA_AAprocess() throws LSystemSymbolException, LSystemLengthException {
+	public void testA_AAprocess() throws LSystemSymbolException, LSystemLengthException 
+	{
 		char[] test = {'A'};
 		Set<LRule> rules = new HashSet<LRule>();
 		rules.add(new A_AA());
@@ -47,7 +51,8 @@ public class LLineTest {
 	}
 	
 	@Test
-	public void testA_BC() throws LSystemSymbolException, LSystemLengthException {
+	public void testA_BC() throws LSystemSymbolException, LSystemLengthException 
+	{
 		char[] test = {'A'};
 		Set<LRule> rules = new HashSet<LRule>();
 		
@@ -66,41 +71,57 @@ public class LLineTest {
 	}
 	
 	@Test
-	public void testLSystemLengthException() {
+	public void testLSystemLengthException() 
+	{
 		char[] test = {'A'};
 		Set<LRule> rules = new HashSet<LRule>();
 		rules.add(new A_X());
 		LLine line = new LLine(test, rules);
 		boolean caughtClean = false;
-		try {
+		try 
+		{
 			line.process();
 			line.process(); // exception raised this pass, because first still
 			                // has line to process
-		} catch (LSystemSymbolException e) {
-		} catch (LSystemLengthException e) {
+		} 
+		catch (LSystemSymbolException e) 
+		{
+			
+		} 
+		catch (LSystemLengthException e) 
+		{
 			caughtClean = true;
 		}
-		if (!caughtClean) {
+		if (!caughtClean) 
+		{
 			fail("Should have thrown LSystemLengthException");
 		}
 	}
 	
 	@Test
-	public void testLSystemSymbolException() {
+	public void testLSystemSymbolException() 
+	{
 		char[] test = {'A'};
 		Set<LRule> rules = new HashSet<LRule>();
 		rules.add(new A_Q());
 		LLine line = new LLine(test, rules);
 		boolean caughtClean = false;
-		try {
+		try 
+		{
 			line.process();
 			line.process(); // exception raised this pass, because first still
 			                // has line to process
-		} catch (LSystemSymbolException e) {
+		} 
+		catch (LSystemSymbolException e) 
+		{
 			caughtClean = true;
-		} catch (LSystemLengthException e) {
 		}
-		if (!caughtClean) {
+		catch (LSystemLengthException e) 
+		{
+			
+		}
+		if (!caughtClean) 
+		{
 			fail("Should have thrown LSystemSymbolException");
 		}
 	}
