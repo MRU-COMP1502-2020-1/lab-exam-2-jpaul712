@@ -1,0 +1,14 @@
+package lsystems;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class A_QTest {
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}
