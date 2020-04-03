@@ -2,9 +2,15 @@ package lsystems;
 
 public class LSystemSymbolException extends Exception {
 
-	public String getSymbol() {
-		// TODO Auto-generated method stub
-		return null;
+	char b;
+	public LSystemSymbolException(char b)
+	{
+		this.b = b;
+	}
+	
+	public char getSymbol()
+	{
+		return b;
 	}
 
 }
