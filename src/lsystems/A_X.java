@@ -2,16 +2,18 @@ package lsystems;
 
 public class A_X extends LRule {
 
-	@Override
-	public char getMatch() {
-		// TODO Auto-generated method stub
-		return 0;
+	private final char match = 'A';
+	private final char[] body = {};
+	
+	
+	public char getMatch()
+	{
+		return match;
 	}
-
-	@Override
-	public char[] getBody() {
-		// TODO Auto-generated method stub
-		return null;
+	
+	public char[] getBody()
+	{
+		return body;
 	}
 
 }

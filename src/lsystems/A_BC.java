@@ -3,7 +3,7 @@ package lsystems;
 public class A_BC extends LRule{
 	
 	private final char match = 'A';
-	private final char[] body = {'A', 'B', 'C'};
+	private final char[] body = {'B', 'C'};
 	
 	
 	public char getMatch()
