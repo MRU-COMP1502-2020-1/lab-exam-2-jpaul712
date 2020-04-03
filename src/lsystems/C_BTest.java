@@ -7,7 +7,7 @@ import org.junit.Test;
 public class C_BTest {
 
 	@Test
-	public void testA_A() 
+	public void test() 
 	{
 		
 	}
